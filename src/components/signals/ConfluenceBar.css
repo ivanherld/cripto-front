@@ -1,0 +1,109 @@
+.confluence-bar-wrap {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  margin-bottom: 14px;
+}
+
+.confluence-bar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.confluence-bar-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex: 1;
+}
+
+.confluence-direction {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.confluence-direction--bull {
+  background: var(--bull-bg);
+  color: var(--bull-text);
+}
+
+.confluence-direction--bear {
+  background: var(--bear-bg);
+  color: var(--bear-text);
+}
+
+.confluence-direction--neutral {
+  background: var(--neutral-bg);
+  color: var(--neutral-text);
+}
+
+.confluence-score {
+  font-size: 20px;
+  font-weight: 600;
+  min-width: 48px;
+  text-align: right;
+}
+
+.confluence-score--bull { color: var(--bull); }
+.confluence-score--bear { color: var(--bear); }
+.confluence-score--neutral { color: var(--text-muted); }
+
+/* ── Bar ── */
+.confluence-track {
+  position: relative;
+  height: 10px;
+  background: var(--border-light);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.confluence-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.confluence-axis-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.confluence-axis-label--bear    { color: var(--bear); }
+.confluence-axis-label--neutral  { color: var(--text-muted); }
+.confluence-axis-label--bull    { color: var(--bull); }
+
+.confluence-midline {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--text-muted);
+  opacity: 0.5;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.confluence-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.confluence-fill--bull {
+  background: var(--bull);
+}
+
+.confluence-fill--bear {
+  background: var(--bear);
+}

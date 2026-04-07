@@ -1,0 +1,53 @@
+.regime-votes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vote-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  min-width: 68px;
+  cursor: default;
+}
+
+.vote-chip-label {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 2px;
+}
+
+.vote-chip-result {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.vote-chip--bull {
+  background: var(--bull-bg);
+  border-color: var(--bull);
+  color: var(--bull-text);
+}
+
+.vote-chip--bear {
+  background: var(--bear-bg);
+  border-color: var(--bear);
+  color: var(--bear-text);
+}
+
+.vote-chip--neutral {
+  background: var(--neutral-bg, #f3f4f6);
+  border-color: var(--border);
+  color: var(--neutral-text, #555);
+}
+
+.vote-chip--na {
+  background: var(--surface-alt);
+  border-color: var(--border);
+  color: var(--text-muted);
+}

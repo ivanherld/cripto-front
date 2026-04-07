@@ -1,0 +1,51 @@
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--border-light, #e5e7eb) 25%,
+    var(--surface-alt, #f3f4f6) 50%,
+    var(--border-light, #e5e7eb) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s infinite;
+  display: block;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-regime-block {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.skeleton-regime-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skeleton-votes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.skeleton-analysis {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-signal-group {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}

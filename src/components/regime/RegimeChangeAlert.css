@@ -1,0 +1,74 @@
+.regime-change-alert {
+  border-radius: 8px;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+}
+
+.regime-change-alert--bull {
+  background: var(--bull-bg);
+  border-color: var(--bull);
+}
+
+.regime-change-alert--bear {
+  background: var(--bear-bg);
+  border-color: var(--bear);
+}
+
+.regime-change-alert--neutral {
+  background: var(--neutral-bg, #f3f4f6);
+  border-color: var(--border);
+}
+
+.regime-change-alert-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.regime-change-alert--bull .regime-change-alert-header svg,
+.regime-change-alert--bull .regime-change-alert-title {
+  color: var(--bull-text);
+}
+
+.regime-change-alert--bear .regime-change-alert-header svg,
+.regime-change-alert--bear .regime-change-alert-title {
+  color: var(--bear-text);
+}
+
+.regime-change-alert-title {
+  font-size: 13px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.regime-change-alert-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.regime-dir-badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.regime-dir-badge--bull {
+  background: var(--bull);
+  color: #fff;
+}
+
+.regime-dir-badge--bear {
+  background: var(--bear);
+  color: #fff;
+}
+
+.regime-change-alert-detail {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.5;
+  padding-left: 22px;
+}

@@ -1,0 +1,74 @@
+.signal-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 0.5px solid var(--border-light);
+}
+
+.signal-row:last-child {
+  border-bottom: none;
+}
+
+.signal-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.signal-badge--bull {
+  background: var(--bull-bg);
+  color: var(--bull-text);
+  border: 0.5px solid var(--bull);
+}
+
+.signal-badge--bear {
+  background: var(--bear-bg);
+  color: var(--bear-text);
+  border: 0.5px solid var(--bear);
+}
+
+.signal-badge--neutral {
+  background: var(--neutral-bg, #f3f4f6);
+  color: var(--neutral-text, #555);
+  border: 0.5px solid var(--border);
+}
+
+.signal-text {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.signal-row-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.regime-tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.regime-tag--favor {
+  background: var(--bull-bg);
+  color: var(--bull-text);
+}
+
+.regime-tag--against {
+  background: var(--bear-bg);
+  color: var(--bear-text);
+}

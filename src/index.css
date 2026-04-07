@@ -1,0 +1,221 @@
+/* ── CryptoLens Design Tokens ─────────────────────────────────────────── */
+:root {
+  /* Brand colors */
+  --bull: #639922;
+  --bull-bg: #eaf3de;
+  --bull-text: #27500a;
+
+  --bear: #e24b4a;
+  --bear-bg: #fcebeb;
+  --bear-text: #791f1f;
+
+  --lateral: #ba7517;
+  --lateral-bg: #faeeda;
+  --lateral-text: #633806;
+
+  --accent: #185fa5;
+  --accent-bg: #e6f1fb;
+
+  /* Neutral surface */
+  --surface: #ffffff;
+  --surface-alt: #f7f8fa;
+  --border: #e0e3e8;
+  --border-light: #eceef2;
+
+  /* Text */
+  --text: #111827;
+  --text-muted: #6b7280;
+
+  /* Neutral signals */
+  --neutral-bg: #f3f4f6;
+  --neutral-text: #4b5563;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bull: #7bbf2e;
+    --bull-bg: #1a2e0a;
+    --bull-text: #a8e05a;
+
+    --bear: #e86060;
+    --bear-bg: #2a0f0f;
+    --bear-text: #f59393;
+
+    --lateral: #d4892a;
+    --lateral-bg: #2a1a06;
+    --lateral-text: #f0b96b;
+
+    --accent: #3b82f6;
+    --accent-bg: #0d1f3c;
+
+    --surface: #0f1117;
+    --surface-alt: #181c24;
+    --border: #2a2e38;
+    --border-light: #1e2230;
+
+    --text: #f3f4f6;
+    --text-muted: #9ca3af;
+
+    --neutral-bg: #1f2330;
+    --neutral-text: #d1d5db;
+  }
+}
+
+[data-theme="dark"] {
+  --bull: #7bbf2e;
+  --bull-bg: #1a2e0a;
+  --bull-text: #a8e05a;
+
+  --bear: #e86060;
+  --bear-bg: #2a0f0f;
+  --bear-text: #f59393;
+
+  --lateral: #d4892a;
+  --lateral-bg: #2a1a06;
+  --lateral-text: #f0b96b;
+
+  --accent: #3b82f6;
+  --accent-bg: #0d1f3c;
+
+  --surface: #0f1117;
+  --surface-alt: #181c24;
+  --border: #2a2e38;
+  --border-light: #1e2230;
+
+  --text: #f3f4f6;
+  --text-muted: #9ca3af;
+
+  --neutral-bg: #1f2330;
+  --neutral-text: #d1d5db;
+}
+
+/* ── Reset & Base ─────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--surface-alt);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+}
+
+select {
+  font-family: inherit;
+}
+
+/* ── Layout ───────────────────────────────────────────────────────────── */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 16px;
+  padding: 16px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+}
+
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── SL/TP block ──────────────────────────────────────────────────────── */
+.sltp-wrap {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.sltp-header {
+  padding: 7px 12px;
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sltp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--surface);
+}
+
+.sltp-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 8px;
+  border-right: 1px solid var(--border);
+}
+
+.sltp-item:last-child {
+  border-right: none;
+}
+
+.sltp-item--sl { background: color-mix(in srgb, var(--bear-bg) 40%, var(--surface) 60%); }
+.sltp-item--tp { background: color-mix(in srgb, var(--bull-bg) 40%, var(--surface) 60%); }
+
+.sltp-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 3px;
+}
+
+.sltp-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .sltp-grid { grid-template-columns: repeat(2, 1fr); }
+  .sltp-item:nth-child(2) { border-right: none; }
+}

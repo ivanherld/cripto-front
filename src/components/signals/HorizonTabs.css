@@ -1,0 +1,67 @@
+.horizon-tabs-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.horizon-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+
+.horizon-tab {
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: -1px;
+  transition: color 0.15s;
+}
+
+.horizon-tab:hover {
+  color: var(--text);
+  background: var(--surface-alt);
+}
+
+.horizon-tab--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.timeframe-tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.timeframe-tab {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.timeframe-tab:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.timeframe-tab--active {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 500;
+}

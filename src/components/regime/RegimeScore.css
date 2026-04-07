@@ -1,0 +1,50 @@
+.regime-score {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.regime-score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 16px;
+  flex: 1;
+}
+
+.regime-score-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.regime-score-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.regime-score-value {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.regime-score-value--muted {
+  color: var(--text-muted);
+}
+
+.regime-score-value--bull {
+  color: var(--bull-text);
+}
+
+.regime-score-value--bear {
+  color: var(--bear-text);
+}

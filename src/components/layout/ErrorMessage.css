@@ -1,0 +1,35 @@
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--bear);
+  border-radius: 8px;
+  background: var(--bear-bg);
+  color: var(--bear-text);
+}
+
+.error-message svg {
+  flex-shrink: 0;
+  color: var(--bear);
+}
+
+.error-message-text {
+  font-size: 13px;
+  flex: 1;
+}
+
+.error-retry-btn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--bear);
+  background: var(--surface);
+  color: var(--bear-text);
+  cursor: pointer;
+}
+
+.error-retry-btn:hover {
+  background: var(--bear-bg);
+}

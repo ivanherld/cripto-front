@@ -1,0 +1,81 @@
+.macro-wrap {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--surface);
+  margin-bottom: 12px;
+}
+
+.macro-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.macro-title {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.macro-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 8px;
+}
+
+.macro-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-alt);
+}
+
+.macro-card-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.macro-card-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.macro-card-value--accent {
+  color: var(--accent);
+}
+
+.macro-card-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.macro-card-days {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.macro-card-days--bull {
+  color: var(--bull-text);
+}
+
+.macro-card-days--bear {
+  color: var(--bear-text);
+}
